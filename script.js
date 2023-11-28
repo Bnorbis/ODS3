@@ -101,7 +101,7 @@ function excluiDoador(doadorId) {
     return doador.id !== doadorId;
   });
 
-  if(listaDoadoresAtual < listaDoadores.length) {
+  if(listaDoadoresAtual.length < listaDoadores.length) {
     listaDoadores = listaDoadoresAtual;
     localStorage.setItem('listaDoadores', JSON.stringify(listaDoadores));
     criarListaDoadores()
